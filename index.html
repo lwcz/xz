@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta content="width=device-width,initial-scale=1.0,maximum-scale=1.0,user-scalable=0" name="viewport"/>
+	<meta content="yes" name="apple-mobile-web-app-capable"/>
+	<meta content="black" name="apple-mobile-web-app-status-bar-style"/>
+	<meta content="telephone=no" name="format-detection"/>
+    <link rel="stylesheet" href="css/xin.css">
+  <script src="js/jquery.js"></script>
+	<title>登录器安装</title>
+	
+	<script type="text/javascript">
+	function InUrl(s){
+		    window.setTimeout("window.location='<?php echo $down;?>'",s); 
+        }	
+		function CheckReg(){
+			var user=$.trim($("#name").val());
+			var username=/^[0-9a-zA-Z]*$/g;
+			if(user.length<6){
+				alert("用户名最少6位!");
+				return false;
+			}
+			if(username.test(user)==false){
+				alert("用户名只能是英文或数字!");
+				return false;
+			}
+			if(user.length>12){
+				alert("用户名最长12位!");
+				return false;
+			}			
+			var password=$.trim($("#pass").val());
+			if(password.length<6){
+				alert("密码最少6位!");
+				return false;
+			}
+			if(password.length>12){
+				alert("密码最长12位!");
+				return false;
+			}		
+			var password2=$.trim($("#pass2").val());
+			if(password2 != password){
+				alert("两次输入的密码不一致!");
+				return false;
+			}
+			var email = $.trim($("#email").val());
+			if(email.length<6){
+				alert("安全码最少6位!");
+				return false;
+			}
+			if(email.length>12){
+				alert("安全码最长12位!");
+				return false;
+			}
+		}
+	</script>
+</head>
+<body>
+ 	<div class="wrap">
+ 		<div class="logo"></div>
+ 		<div class="title">安装指南（请用手机浏览器打开）<div class="border"></div>></div>
+		
+ 		<div class="from-box">
+		       
+			
+ 			<div class="loginbtn"><input type="submit" onclick="location.href='https://lwcz.github.io/dn/'" name="op" class="login" value="电脑安装(下模拟器+安卓)"></div>
+ 			</form>						
+		
+
+<div class="loginbtn"><input type="button" onclick="location.href='https://www.guluapp.cn/0ASc'" class="reg" value="安卓①">
+
+<div class="loginbtn"><input type="button" onclick="location.href='https://lwcz.github.io/ipa/'" class="zhao" value="苹果①(免费自签)"></div>
+
+<div class="loginbtn"><input type="button" onclick="location.href='https://xun.biobase.top/z/ag2COv'" class="reg" value="安卓②">
+
+<div class="loginbtn"><input type="button" onclick="location.href='sppy.yft2.com/kGsAab'" class="zhao" value="苹果②(收费超签)"></div>
+			
+
+ 		</div>
+  	</div>
+<?php echo $alert; ?>
+
+	<script src="js/app.js"></script>
+<script src="js/scrollreveal.js"></script>
+<script>
+    if (!(/msie [6|7|8|9]/i.test(navigator.userAgent))){
+        (function(){
+            window.scrollReveal = new scrollReveal({reset: true});
+        })();
+    };
+</script>
+</body>
+</html>
